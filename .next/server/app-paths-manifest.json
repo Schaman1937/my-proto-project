@@ -1,5 +1,8 @@
 {
+  "/attributes/page": "app/attributes/page.js",
   "/agon/page": "app/agon/page.js",
-  "/page": "app/page.js",
-  "/login/page": "app/login/page.js"
+  "/leaderboard/page": "app/leaderboard/page.js",
+  "/login/page": "app/login/page.js",
+  "/materials/page": "app/materials/page.js",
+  "/page": "app/page.js"
 }
