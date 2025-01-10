@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx chmod +x ./node_modules/.bin/next && next build",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -12,7 +12,5 @@
     "react": "latest",
     "react-dom": "latest"
   },
-  "devDependencies": {
-    "chmod-cli": "^1.0.0"
-  }
+  "devDependencies": {}
 }
