@@ -1,3 +1,5 @@
+'use client'
+
 export default function ScoreTable({ players, isFull }) {
   const sorted = [...players].sort((a, b) => b.score - a.score)
   const data = isFull ? sorted : sorted.slice(0, 10)

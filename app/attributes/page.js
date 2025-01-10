@@ -1,5 +1,6 @@
-import Header from '../../shared/Header'
-import Footer from '../../shared/Footer'
+'use client'
+import Header from '../shared/Header'
+import Footer from '../shared/Footer'
 
 export default function AttributesPage() {
   return (
@@ -16,7 +17,6 @@ export default function AttributesPage() {
               Купить
             </button>
           </div>
-          {/* Добавьте ещё товары... */}
         </div>
       </main>
       <Footer />

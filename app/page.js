@@ -23,10 +23,7 @@ export default function HomePage() {
         <section className="bg-gray-800 p-6 rounded mb-8 text-center">
           <h1 className="text-3xl font-bold mb-4">Добро пожаловать!</h1>
           <p className="text-gray-300 mb-2">
-            Участвуй в агонах, получай баллы за правильные ответы.
-          </p>
-          <p className="text-gray-300 mb-2">
-            Когда 15 минут истекают, начинается 5-минутный перерыв, и всё повторяется!
+            Теперь таймер ведётся на сервере. Все участники видят одинаковое время!
           </p>
         </section>
         <section className="bg-gray-800 p-6 rounded">

@@ -5,20 +5,20 @@ export default function SessionQuestions({ sessionStatus }) {
   const questions = [
     {
       id: 1,
-      text: 'Как называется период до изобретения письменности?',
+      text: 'Как называется период до письменности?',
       options: [
-        { text: 'Доистория', isCorrect: true, details: 'Это правильный ответ. Доистория...' },
-        { text: 'Средние века', isCorrect: false, details: 'Средние века — другое...' },
-        { text: 'Античность', isCorrect: false, details: 'Античность — другое...' }
+        { text: 'Доистория', isCorrect: true, details: 'Правильный ответ...' },
+        { text: 'Средние века', isCorrect: false, details: 'Нет...' },
+        { text: 'Новое время', isCorrect: false, details: 'Нет...' }
       ]
     },
     {
       id: 2,
-      text: 'Какой металл начали обрабатывать первым?',
+      text: 'Какой металл обрабатывать первым?',
       options: [
-        { text: 'Железо', isCorrect: false, details: 'Железо освоили позднее...' },
-        { text: 'Медь', isCorrect: true, details: 'Медь — первый металл...' },
-        { text: 'Бронза', isCorrect: false, details: 'Бронза — сплав...' }
+        { text: 'Железо', isCorrect: false, details: 'Позже...' },
+        { text: 'Медь', isCorrect: true, details: 'Да, медь...' },
+        { text: 'Бронза', isCorrect: false, details: 'Это сплав...' }
       ]
     }
   ]
@@ -26,10 +26,9 @@ export default function SessionQuestions({ sessionStatus }) {
   const [answers, setAnswers] = useState({})
 
   function handleAnswer(qId, idx) {
-    const question = questions.find(q => q.id === qId)
-    if (!question) return
-
-    const chosen = question.options[idx]
+    const q = questions.find(q => q.id === qId)
+    if (!q) return
+    const chosen = q.options[idx]
     setAnswers(prev => ({
       ...prev,
       [qId]: {
@@ -41,7 +40,6 @@ export default function SessionQuestions({ sessionStatus }) {
   }
 
   if (sessionStatus === 'break') {
-    // Итоги
     let correctCount = 0
     questions.forEach(q => {
       if (answers[q.id]?.correct) correctCount++
@@ -55,14 +53,16 @@ export default function SessionQuestions({ sessionStatus }) {
           return (
             <div key={q.id} className="mb-4 border border-gray-700 p-2 rounded">
               <p className="font-semibold text-gray-100">{q.text}</p>
-              {ans?.correct
-                ? <p className="text-green-400">✓ Правильно</p>
-                : (
-                  <div className="text-red-400">
-                    ✗ Ошибка
-                    <p className="text-gray-200 mt-1">Правильный ответ: {ans?.details}</p>
-                  </div>
-                )}
+              {ans?.correct ? (
+                <p className="text-green-400">✓ Правильно</p>
+              ) : (
+                <div className="text-red-400">
+                  ✗ Ошибка
+                  <p className="text-gray-200 mt-1">
+                    Правильный ответ: {ans?.details}
+                  </p>
+                </div>
+              )}
             </div>
           )
         })}
@@ -70,7 +70,6 @@ export default function SessionQuestions({ sessionStatus }) {
     )
   }
 
-  // Если sessionStatus === 'play'
   return (
     <div className="bg-gray-800 p-4 rounded">
       <h2 className="text-xl font-bold mb-2">Вопросы</h2>
@@ -97,7 +96,6 @@ export default function SessionQuestions({ sessionStatus }) {
                   </div>
                 )
               }
-              // Можно выбрать вариант
               return (
                 <button
                   key={idx}
@@ -108,8 +106,6 @@ export default function SessionQuestions({ sessionStatus }) {
                 </button>
               )
             })}
-
-            {/* Если ответ неверный — сразу показываем развернутый ответ */}
             {answered && !ans.correct && (
               <p className="text-sm text-gray-300 mt-1">
                 Правильный ответ: {ans.details}

@@ -1,6 +1,7 @@
-import Header from '../../shared/Header'
-import Footer from '../../shared/Footer'
-import ScoreTable from '../../shared/ScoreTable'
+'use client'
+import Header from '../shared/Header'
+import Footer from '../shared/Footer'
+import ScoreTable from '../shared/ScoreTable'
 
 const allPlayers = [
   { id: 1, name: 'Alice', score: 10 },
@@ -14,10 +15,7 @@ const allPlayers = [
   { id: 9, name: 'Irene', score: 6 },
   { id: 10, name: 'John', score: 5 },
   { id: 11, name: 'Kate', score: 5 },
-  { id: 12, name: 'Leo', score: 4 },
-  { id: 13, name: 'Mike', score: 3 },
-  { id: 14, name: 'Nina', score: 3 },
-  { id: 15, name: 'Owen', score: 2 }
+  { id: 12, name: 'Leo', score: 4 }
 ]
 
 export default function LeaderboardPage() {

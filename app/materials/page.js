@@ -1,5 +1,6 @@
-import Header from '../../shared/Header'
-import Footer from '../../shared/Footer'
+'use client'
+import Header from '../shared/Header'
+import Footer from '../shared/Footer'
 import Link from 'next/link'
 
 export default function MaterialsPage() {

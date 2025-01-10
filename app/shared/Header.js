@@ -1,19 +1,32 @@
 'use client'
-
 import Link from 'next/link'
-import { useContext, useEffect } from 'react'
-import { TimerContext } from './TimerContext'
+import { useEffect, useState } from 'react'
 
 export default function Header() {
-  const {
-    sessionStatus, timeLeft, breakLeft
-  } = useContext(TimerContext)
+  const [sessionStatus, setSessionStatus] = useState('play')
+  const [timeLeft, setTimeLeft] = useState(900)
 
-  // Определяем, что выводим
+  async function fetchTimer() {
+    try {
+      const res = await fetch('/api/timer', { cache: 'no-store' })
+      if (!res.ok) throw new Error(`status = ${res.status}`)
+      const data = await res.json()
+      setSessionStatus(data.sessionStatus)
+      setTimeLeft(data.timeLeft)
+    } catch (err) {
+      console.error('Ошибка запроса /api/timer:', err)
+    }
+  }
+
+  useEffect(() => {
+    fetchTimer()
+    const t = setInterval(fetchTimer, 5000)
+    return () => clearInterval(t)
+  }, [])
+
   const isBreak = sessionStatus === 'break'
-  const display = isBreak ? breakLeft : timeLeft
-  const minutes = Math.floor(display / 60)
-  const seconds = display % 60
+  const minutes = Math.floor(timeLeft / 60)
+  const seconds = timeLeft % 60
   const formatted = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 
   return (
@@ -30,18 +43,10 @@ export default function Header() {
           </Link>
         </div>
         <nav className="flex items-center space-x-4">
-          <Link href="/agon" className="text-gray-300 hover:text-white">
-            Агон
-          </Link>
-          <Link href="/attributes" className="text-gray-300 hover:text-white">
-            Атрибутика
-          </Link>
-          <Link href="/materials" className="text-gray-300 hover:text-white">
-            Материалы
-          </Link>
-          <Link href="/leaderboard" className="text-gray-300 hover:text-white">
-            Доска почёта
-          </Link>
+          <Link href="/agon" className="text-gray-300 hover:text-white">Агон</Link>
+          <Link href="/attributes" className="text-gray-300 hover:text-white">Атрибутика</Link>
+          <Link href="/materials" className="text-gray-300 hover:text-white">Материалы</Link>
+          <Link href="/leaderboard" className="text-gray-300 hover:text-white">Доска почёта</Link>
           <Link
             href="/login"
             className="border border-gray-600 px-2 py-1 rounded text-gray-300 hover:text-white hover:bg-gray-700"
@@ -54,7 +59,7 @@ export default function Header() {
             </div>
           ) : (
             <div className="text-green-400 font-bold ml-3">
-              До конца агона: {formatted}
+              Идёт Агон: {formatted}
             </div>
           )}
         </nav>
