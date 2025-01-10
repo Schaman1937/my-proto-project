@@ -1,7 +1,7 @@
 'use client'
 
-import Header from '../shared/Header'
-import Footer from '../shared/Footer'
+import Header from '../../shared/Header'
+import Footer from '../../shared/Footer'
 import { useState } from 'react'
 
 export default function LoginPage() {

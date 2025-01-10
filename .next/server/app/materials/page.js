@@ -68,7 +68,7 @@ module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
 
 /***/ }),
 
-/***/ 8524:
+/***/ 5485:
 /***/ ((module) => {
 
 "use strict";
@@ -325,10 +325,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 5419:
+/***/ 6567:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7994));
 Promise.resolve(/* import() eager */).then(__webpack_require__.t.bind(__webpack_require__, 2919, 23))
 
 /***/ }),
@@ -342,11 +341,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ MaterialsPage)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8499);
-/* harmony import */ var _shared_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(957);
-/* harmony import */ var _shared_Header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_shared_Header__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _shared_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8173);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2890);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Header'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Footer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2890);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -368,7 +366,7 @@ function MaterialsPage() {
     ];
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_shared_Header__WEBPACK_IMPORTED_MODULE_1___default()), {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Header'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {}),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
                 className: "container mx-auto px-4 py-8",
                 children: [
@@ -393,7 +391,7 @@ function MaterialsPage() {
                                         className: "text-gray-200",
                                         children: article.excerpt
                                     }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                                         href: `/materials/${article.id}`,
                                         className: "text-blue-400 hover:underline",
                                         children: "Читать далее"
@@ -403,47 +401,10 @@ function MaterialsPage() {
                     })
                 ]
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_shared_Footer__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {})
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Footer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {})
         ]
     });
 }
-
-
-/***/ }),
-
-/***/ 8173:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ Footer)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8499);
-
-function Footer() {
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("footer", {
-        className: "bg-gray-800 mt-8 py-4",
-        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-            className: "container mx-auto text-center text-gray-400",
-            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-                children: [
-                    "\xa9 ",
-                    new Date().getFullYear(),
-                    " Протоистория. Все права защищены."
-                ]
-            })
-        })
-    });
-}
-
-
-/***/ }),
-
-/***/ 957:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-/* __next_internal_client_entry_do_not_use__ */ const { createProxy  } = __webpack_require__(4353);
-module.exports = createProxy("C:\\ProtohistoryGit\\my-proto-project\\app\\shared\\Header.js");
 
 
 /***/ }),
@@ -477,7 +438,7 @@ module.exports = __webpack_require__(6259);
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [263,953], () => (__webpack_exec__(8001)));
+var __webpack_exports__ = __webpack_require__.X(0, [227,919,625], () => (__webpack_exec__(8001)));
 module.exports = __webpack_exports__;
 
 })();

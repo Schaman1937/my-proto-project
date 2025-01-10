@@ -1,5 +1,5 @@
-import Header from '../shared/Header'
-import Footer from '../shared/Footer'
+import Header from '../../shared/Header'
+import Footer from '../../shared/Footer'
 import Link from 'next/link'
 
 export default function MaterialsPage() {
@@ -8,13 +8,13 @@ export default function MaterialsPage() {
       id: '1',
       title: 'Артефакты и находки',
       date: '2025-01-03',
-      excerpt: 'Краткое описание статьи об интересных находках...',
+      excerpt: 'Краткое описание статьи об интересных находках...'
     },
     {
       id: '2',
       title: 'Забытые цивилизации',
       date: '2025-01-04',
-      excerpt: 'Рассмотрим некоторые утерянные города и народы...',
+      excerpt: 'Рассмотрим некоторые утерянные города и народы...'
     }
   ]
 

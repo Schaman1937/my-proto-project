@@ -5,7 +5,7 @@ exports.id = 543;
 exports.ids = [543];
 exports.modules = {
 
-/***/ 6495:
+/***/ 7303:
 /***/ ((__unused_webpack_module, exports) => {
 
 var __webpack_unused_export__;
@@ -234,7 +234,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.defaultHead = defaultHead;
 exports["default"] = void 0;
-var _extends = (__webpack_require__(6495)/* ["default"] */ .Z);
+var _extends = (__webpack_require__(7303)/* ["default"] */ .Z);
 var _interop_require_default = (__webpack_require__(2648)/* ["default"] */ .Z);
 var _interop_require_wildcard = (__webpack_require__(1598)/* ["default"] */ .Z);
 var _react = _interop_require_wildcard(__webpack_require__(8038));

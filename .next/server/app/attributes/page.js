@@ -44,43 +44,11 @@ module.exports = require("next/dist/shared/lib/app-router-context.js");
 
 /***/ }),
 
-/***/ 2796:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/head-manager-context.js");
-
-/***/ }),
-
 /***/ 9274:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/hooks-client-context.js");
-
-/***/ }),
-
-/***/ 4014:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
-
-/***/ }),
-
-/***/ 8524:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/is-plain-object.js");
-
-/***/ }),
-
-/***/ 8020:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/mitt.js");
 
 /***/ }),
 
@@ -92,163 +60,11 @@ module.exports = require("next/dist/shared/lib/no-ssr-error.js");
 
 /***/ }),
 
-/***/ 4406:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/page-path/denormalize-page-path.js");
-
-/***/ }),
-
-/***/ 4964:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router-context.js");
-
-/***/ }),
-
-/***/ 1751:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
-
-/***/ }),
-
-/***/ 6220:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/compare-states.js");
-
-/***/ }),
-
-/***/ 299:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/format-next-pathname-info.js");
-
-/***/ }),
-
-/***/ 3938:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
-
-/***/ }),
-
-/***/ 9565:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
-
-/***/ }),
-
-/***/ 5789:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-next-pathname-info.js");
-
-/***/ }),
-
-/***/ 1897:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/is-bot.js");
-
-/***/ }),
-
-/***/ 1428:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
-
-/***/ }),
-
-/***/ 8854:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
-
-/***/ }),
-
-/***/ 1292:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
-
-/***/ }),
-
-/***/ 4567:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/path-has-prefix.js");
-
-/***/ }),
-
-/***/ 979:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
-
-/***/ }),
-
-/***/ 3297:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
-
-/***/ }),
-
-/***/ 6052:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
-
-/***/ }),
-
-/***/ 4226:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
-
-/***/ }),
-
-/***/ 5052:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
-
-/***/ }),
-
 /***/ 3349:
 /***/ ((module) => {
 
 "use strict";
 module.exports = require("next/dist/shared/lib/server-inserted-html.js");
-
-/***/ }),
-
-/***/ 9232:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
@@ -325,10 +141,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4263:
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 3259:
+/***/ (() => {
 
-Promise.resolve(/* import() eager */).then(__webpack_require__.bind(__webpack_require__, 7994))
+
 
 /***/ }),
 
@@ -341,16 +157,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ AttributesPage)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8499);
-/* harmony import */ var _shared_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(957);
-/* harmony import */ var _shared_Header__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_shared_Header__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _shared_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8173);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Header'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Footer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 
 function AttributesPage() {
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((_shared_Header__WEBPACK_IMPORTED_MODULE_1___default()), {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Header'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {}),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
                 className: "container mx-auto px-4 py-8",
                 children: [
@@ -385,47 +200,10 @@ function AttributesPage() {
                     })
                 ]
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_shared_Footer__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {})
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../../shared/Footer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {})
         ]
     });
 }
-
-
-/***/ }),
-
-/***/ 8173:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (/* binding */ Footer)
-/* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8499);
-
-function Footer() {
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("footer", {
-        className: "bg-gray-800 mt-8 py-4",
-        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-            className: "container mx-auto text-center text-gray-400",
-            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-                children: [
-                    "\xa9 ",
-                    new Date().getFullYear(),
-                    " Протоистория. Все права защищены."
-                ]
-            })
-        })
-    });
-}
-
-
-/***/ }),
-
-/***/ 957:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-/* __next_internal_client_entry_do_not_use__ */ const { createProxy  } = __webpack_require__(4353);
-module.exports = createProxy("C:\\ProtohistoryGit\\my-proto-project\\app\\shared\\Header.js");
 
 
 /***/ })
@@ -437,7 +215,7 @@ module.exports = createProxy("C:\\ProtohistoryGit\\my-proto-project\\app\\shared
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [263,953], () => (__webpack_exec__(3904)));
+var __webpack_exports__ = __webpack_require__.X(0, [227,625], () => (__webpack_exec__(3904)));
 module.exports = __webpack_exports__;
 
 })();

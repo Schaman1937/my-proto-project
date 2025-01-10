@@ -1,56 +1,19 @@
 'use client'
 
 import Link from 'next/link'
-import { useState, useEffect, useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { TimerContext } from './TimerContext'
-
-/*
-  Глобальный таймер 15+5 минут:
-  - При sessionStatus='play': 15 мин (900 секунд)
-  - При sessionStatus='break': 5 мин (300 секунд)
-  Храним в TimerContext, чтобы Агон-страница знала о статусе (play/break).
-*/
 
 export default function Header() {
   const {
-    sessionStatus, timeLeft, breakLeft,
-    setSessionStatus, setTimeLeft, setBreakLeft
+    sessionStatus, timeLeft, breakLeft
   } = useContext(TimerContext)
 
-  // Запуск счетчиков
-  useEffect(() => {
-    if (sessionStatus === 'play' && timeLeft > 0) {
-      const timer = setInterval(() => {
-        setTimeLeft(prev => prev - 1)
-      }, 1000)
-      return () => clearInterval(timer)
-    }
-
-    // Когда закончилось
-    if (sessionStatus === 'play' && timeLeft <= 0) {
-      setSessionStatus('break')
-    }
-
-    if (sessionStatus === 'break' && breakLeft > 0) {
-      const timer = setInterval(() => {
-        setBreakLeft(prev => prev - 1)
-      }, 1000)
-      return () => clearInterval(timer)
-    }
-
-    if (sessionStatus === 'break' && breakLeft <= 0) {
-      // Начинаем заново
-      setSessionStatus('play')
-      setTimeLeft(900)
-      setBreakLeft(300)
-    }
-  }, [sessionStatus, timeLeft, breakLeft, setSessionStatus, setTimeLeft, setBreakLeft])
-
-  // Рассчитываем, что показывать
+  // Определяем, что выводим
   const isBreak = sessionStatus === 'break'
-  const displayTime = isBreak ? breakLeft : timeLeft
-  const minutes = Math.floor(displayTime / 60)
-  const seconds = displayTime % 60
+  const display = isBreak ? breakLeft : timeLeft
+  const minutes = Math.floor(display / 60)
+  const seconds = display % 60
   const formatted = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 
   return (
@@ -85,8 +48,6 @@ export default function Header() {
           >
             Войти
           </Link>
-
-          {/* Глобальный таймер */}
           {isBreak ? (
             <div className="text-red-400 font-bold ml-3">
               Перерыв: {formatted}

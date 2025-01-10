@@ -708,7 +708,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports["default"] = isError;
 exports.getProperError = getProperError;
-var _isPlainObject = __webpack_require__(8524);
+var _isPlainObject = __webpack_require__(5485);
 function isError(err) {
     return typeof err === "object" && err !== null && "name" in err && "message" in err;
 }
@@ -838,7 +838,7 @@ module.exports = require("next/dist/shared/lib/html-context.js");
 
 /***/ }),
 
-/***/ 8524:
+/***/ 5485:
 /***/ ((module) => {
 
 module.exports = require("next/dist/shared/lib/is-plain-object.js");

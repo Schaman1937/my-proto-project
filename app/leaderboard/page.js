@@ -1,8 +1,7 @@
-import Header from '../shared/Header'
-import Footer from '../shared/Footer'
-import ScoreTable from '../shared/ScoreTable'
+import Header from '../../shared/Header'
+import Footer from '../../shared/Footer'
+import ScoreTable from '../../shared/ScoreTable'
 
-// Полная доска (например, 15 участников)
 const allPlayers = [
   { id: 1, name: 'Alice', score: 10 },
   { id: 2, name: 'Bob', score: 9 },
@@ -18,7 +17,7 @@ const allPlayers = [
   { id: 12, name: 'Leo', score: 4 },
   { id: 13, name: 'Mike', score: 3 },
   { id: 14, name: 'Nina', score: 3 },
-  { id: 15, name: 'Owen', score: 2 },
+  { id: 15, name: 'Owen', score: 2 }
 ]
 
 export default function LeaderboardPage() {

@@ -1,7 +1,4 @@
-// Общая таблица для доски почёта
-// isFull = false => показываем только топ-10, isFull = true => всех
 export default function ScoreTable({ players, isFull }) {
-  // Сортируем по убыванию
   const sorted = [...players].sort((a, b) => b.score - a.score)
   const data = isFull ? sorted : sorted.slice(0, 10)
 
