@@ -3,35 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    // Запуск дев-сервера
     "dev": "next dev",
-
-    /* 
-      Команда сборки: сначала делаем chmod +x для node_modules/.bin/next, 
-      затем выполняем next build.
-    */
-    "build": "cross-env chmod +x ./node_modules/.bin/next && next build",
-
-    // Запуск прод-сервера
-    "start": "next start",
-
-    /*
-      По желанию — дополнительный шаг после установки зависимостей:
-      ещё раз проставить +x, если при кэшировании что-то сбросилось.
-      Если не хотите, можно убрать этот скрипт.
-    */
-    "postinstall": "cross-env chmod +x ./node_modules/.bin/next"
+    "build": "npx chmod +x ./node_modules/.bin/next && next build",
+    "start": "next start"
   },
   "dependencies": {
-    "next": "13.1.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.2.7",
-    "postcss": "8.4.16",
-    "autoprefixer": "10.4.13"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
   },
-  /* Добавляем cross-env в devDependencies */
   "devDependencies": {
-    "cross-env": "7.0.3"
+    "chmod-cli": "^1.0.0"
   }
 }
